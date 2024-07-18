@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
-
-repo_description_lines_max: 2
+  - Monica-Gullapalli
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Monica-Gullapalli/Prompt-Engineering
+  - Monica-Gullapalli/ObjectSense
+  - Monica-Gullapalli/PortfolioPulse-Django-WebApp
+  - Monica-Gullapalli/Emotion_based_playlist
+  - Monica-Gullapalli/m-health-new
+  - Monica-Gullapalli/heart-disease-prediction-using-machine-learning-with-flask
+  # Add more repositories as needed
