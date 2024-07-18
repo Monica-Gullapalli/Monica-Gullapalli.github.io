@@ -46,3 +46,24 @@
   .trophy-card {
     width: 50rem; /* Adjust the width as needed */
   }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+  }
+  
+  .social-icons a {
+    color: var(--global-text-color);
+    font-size: 0.5rem; /* Adjust the size as needed */
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    color: var(--global-theme-color);
+  }
