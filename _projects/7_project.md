@@ -1,81 +1,46 @@
 ---
 layout: page
-title: project 7
-description: with background image
+title: Multimodal Emotion Cause Pair Analysis in Conversations
+description: using Natural Language Processing
 img: assets/img/4.jpg
 importance: 1
 category: work
 related_publications: true
 ---
-
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The Competition of Multimodal Emotion Cause Analysis in Conversations
 
     ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
+    link: https://github.com/tarunannapareddy/NLP-SemEval-2024/tree/main
     ---
+   
+## Task
+We first clarify the definitions of emotion and cause before introducing the task. 
+- **Emotion** is a psychological state associated with thought, feeling and behavioral response. In conversations, emotions are usually annotated at the utterance level. In our dataset, emotion categories are Ekman’s six basic emotions including *Anger*, *Disgust*, *Fear*, *Joy*, *Sadness* and *Surprise*. 
+- **Cause** refers to the objective event or subjective argument that triggers the corresponding emotion.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Based on the multimodal conversational emotion cause dataset [ECF](https://github.com/NUSTM/MECPE), we define two subtasks, each of which contains two slots.
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+<img src="https://github.com/NUSTM/SemEval-2024_ECAC/raw/main/example.png" alt="example" width="900" height="600">
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Subtask 1: Textual Emotion Cause Analysis in Conversations
+In Subtask 1, an emotion cause is defined and annotated as a textual span. 
+- **Slot 1: Emotion Cause Extraction**  Extracting the corresponding textual cause spans given a target emotion utterance in a conversation. As shown in Figure 1, given the Joy emotion in Utterance 3 (U3), the system needs to extract the cause that triggers this emotion in terms of a textual span, i.e., U2\_“You made up!”.
+- **Slot 2: Emotion-Cause Pair Extraction**  Extracting all emotion-cause pairs from the given conversation, where each pair contains an emotion utterance along with its emotion category and the textual cause span, e.g., (U3\_Joy, U2\_"You made up!").
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Subtask 2: Multimodal Emotion Cause Analysis in Conversations
+
+It should be noted that sometimes the cause can not be reflected in text only, and we accordingly propose a multimodal subtask to extract emotion cause in all three modalities (language, audio, and vision). For example, the cause for Phoebe’s Disgust in U5 is that Monica and Chandler were kissing in front of her, which is reflected in the visual modality of U5. In this case, cause is defined and annotated at the utterance level.
+
+- **Slot 1: Emotion Cause Extraction**  In consideration of three modalities, extracting the corresponding cause utterances given the target emotion utterance, e.g., given the Disgust emotion in U5, to predict the cause utterance U5.
+- **Slot 2: Emotion-Cause Pair Extraction**  In consideration of three modalities, extracting all emotion-cause pairs in the conversation, where each pair contains an emotion utterance along with its emotion category and a cause utterance, e.g., (U5\_Disgust, U5).
+
+
+If you want to try this code out then you can go and clone the repository at 
 
 {% raw %}
 
 ```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+git clone https://github.com/tarunannapareddy/NLP-SemEval-2024.git
 ```
 
 {% endraw %}
