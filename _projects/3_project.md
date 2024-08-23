@@ -1,24 +1,17 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: EmoFy
+description: a webapp that captures your mood and suggests a playlist accordingly.
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This is a multimodal project which uses neural networks to allow 1. Mood recognition 2. Song recommendation based on the user whose emotion is captured using the front camera of their device. 
 
     ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
+    link: https://github.com/Monica-Gullapalli/Emotion_based_playlist.git
     ---
 
 <div class="row">
@@ -32,9 +25,17 @@ To give your project a background in the portfolio page, just add the img tag to
         {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+
+
 <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
+
+## Research Paper
+View the Research Paper for this project. [here](/assets/pdf/research-paper.pdf).
+
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
