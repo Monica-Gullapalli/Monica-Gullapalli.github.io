@@ -32,8 +32,14 @@ This is a multimodal project which uses neural networks to allow 1. Mood recogni
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
 
+
+
+
 ## Research Paper
-View the Research Paper for this project. [here](/assets/pdf/research-paper.pdf).
+<div class="row">
+    <embed src="/assets/pdf/research-paper.pdf" type="application/pdf" width="100%" height="600px" />
+</div>
+<br><br>
 
 
 <div class="row">
