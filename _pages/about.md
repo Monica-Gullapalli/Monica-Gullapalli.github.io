@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: Profile-Monica.jpeg
+  image: Monica_profile_picture.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Monica Gullapalli</p>
